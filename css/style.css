@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  background-color: var(--transparent-white);
+}
+
+.sedans,
+.suv,
+.luxury {
+  padding: 2rem;
+}
+
+.logo,
+.title,
+.button,
+.description {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--transparent-white);
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+  color: var(--bright-orange);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.suv {
+  background-color: var(--dark-cyan);
+  color: var(--dark-cyan);
+}
+.luxury {
+  background-color: var(--very-dark-cyan);
+  color: var(--very-dark-cyan);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.sedans > .row > .btn {
+  background-color: var(--very-light-gray);
+  color: var(--bright-orange);
+}
+.suv > .row > .btn {
+  background-color: var(--very-light-gray);
+  color: var(--dark-cyan);
+}
+.luxury > .row > .btn {
+  background-color: var(--very-light-gray);
+  color: var(--very-dark-cyan);
+}
+.sedans > .row > .logo {
+  content: url("../images/icon-sedans.svg");
+  object-fit: contain;
+  max-width: 35%;
+}
+.suv > .row > .logo {
+  content: url("../images/icon-suvs.svg");
+  object-fit: contain;
+  max-width: 35%;
+}
+
+.luxury > .row > .logo {
+  content: url("../images/icon-luxury.svg");
+  object-fit: contain;
+  max-width: 35%;
+}
+
+.button {
+  border-radius: 1.5rem;
+  max-width: 50%;
+  height: auto;
+  margin-left: 1rem;
+  padding: 0.75rem;
+}
+
+.btn:hover {
+  border-color: var(--very-light-gray) !important;
+  background: none !important;
+  color: var(--very-light-gray) !important;
+}
+
+@media screen and (min-width: 768px) {
+  .sedans {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  .luxury {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .description {
+    margin-bottom: 4rem !important;
+  }
+}
